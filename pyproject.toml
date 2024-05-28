@@ -38,6 +38,12 @@ extra-dependencies = ["mypy>=1.0.0"]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/tasty_api tests}"
 
+[tool.hatch.envs.test]
+dependencies = ["pytest>=8.2.1", "pytest-cov>=5.0.0"]
+[[tool.hatch.envs.test.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+
 [tool.coverage.run]
 source_pkgs = ["tasty_api", "tests"]
 branch = true
