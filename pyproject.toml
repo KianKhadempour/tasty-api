@@ -5,14 +5,14 @@ build-backend = "hatchling.build"
 [project]
 name = "tasty-api"
 dynamic = ["version"]
-description = ''
+description = "A typed wrapper for the Tasty API."
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
-keywords = []
+keywords = ["api", "recipes", "cooking", "wrapper"]
 authors = [{ name = "Kian Khadempour", email = "kiankhadempour@gmail.com" }]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 2 - Pre-Alpha",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
@@ -21,8 +21,9 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
+  "Intended Audience :: Developers",
 ]
-dependencies = []
+dependencies = ["requests>=2.32.2", "pydantic>=2.7.1"]
 
 [project.urls]
 Documentation = "https://github.com/KianKhadempour/tasty-api#readme"
