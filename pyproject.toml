@@ -23,7 +23,11 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
   "Intended Audience :: Developers",
 ]
-dependencies = ["requests>=2.32.2", "pydantic>=2.7.1"]
+dependencies = [
+  "requests>=2.32.2",
+  "pydantic>=2.7.1",
+  "pydantic-extra-types>=2.7.0",
+]
 
 [project.urls]
 Documentation = "https://github.com/KianKhadempour/tasty-api#readme"
