@@ -104,6 +104,11 @@ lint.unfixable = [
   "F401",  # Don't touch unused imports
 ]
 
+[tool.ruff.extend-per-file-ignores]
+"tests/*" = [
+  "S101",  # Use of 'assert' statement
+]
+
 [tool.ruff.lint.isort]
 known-first-party = ["tasty_api"]
 
