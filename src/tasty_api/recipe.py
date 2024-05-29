@@ -7,10 +7,7 @@ import pydantic
 import pydantic_extra_types.country
 import pydantic_extra_types.language_code
 
-if typing.TYPE_CHECKING:
-    import datetime
-
-    import tasty_api.tag
+import tasty_api.tag
 
 
 class Show(pydantic.BaseModel):
@@ -183,7 +180,7 @@ class MetadataRecipe(pydantic.BaseModel):
     seo_title: typing.Optional[str]
     servings_noun_plural: str
     servings_noun_singular: str
-    show: ShowItem
+    show: Show
     show_id: int
     slug: str
     tags: typing.List[tasty_api.tag.Tag]
@@ -199,16 +196,6 @@ class MetadataRecipe(pydantic.BaseModel):
     video_id: typing.Optional[int]
     video_url: typing.Optional[str]
     tips_summary: typing.Optional[TipsSummary] = None
-
-    @pydantic.model_validator(mode="before")
-    @classmethod
-    def fix_show(
-        cls, values: typing.Dict[str, typing.Any]
-    ) -> typing.Dict[str, typing.Any]:
-        show_name = values["show"]["name"]
-        values["show_name"] = show_name
-
-        return values
 
 
 class Recipe(pydantic.BaseModel):
