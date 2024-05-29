@@ -70,7 +70,7 @@ exclude_lines = [
 [tool.ruff]
 src = ["src"]
 show-fixes = true
-output-format = "full"
+target-version = "py38"
 lint.select = [
   "A",
   "B",
