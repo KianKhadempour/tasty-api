@@ -98,7 +98,7 @@ lint.select = [
   "W",
   "YTT",
 ]
-lint.ignore = ["ISC001", "UP006", "UP007"]
+lint.ignore = ["ISC001", "UP006", "UP007", "A003"]
 lint.unfixable = [
   "F401",  # Don't touch unused imports
 ]
