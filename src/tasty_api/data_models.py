@@ -4,10 +4,15 @@ import typing
 
 import pydantic
 
-if typing.TYPE_CHECKING:
-    import tasty_api.recipe
+import tasty_api.recipe
+import tasty_api.tip
 
 
 class RecipeListModel(pydantic.BaseModel):
     count: int
     results: typing.List[tasty_api.recipe.Recipe]
+
+
+class TipModel(pydantic.BaseModel):
+    count: int
+    results: typing.List[tasty_api.tip.Tip]
