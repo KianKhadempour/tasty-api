@@ -38,9 +38,9 @@ Source = "https://github.com/KianKhadempour/tasty-api"
 path = "src/tasty_api/__about__.py"
 
 [tool.hatch.envs.types]
-extra-dependencies = ["mypy>=1.0.0"]
+extra-dependencies = ["pyright>=1.1.364"]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/tasty_api tests}"
+check = "pyright {args}"
 
 [tool.hatch.envs.test]
 dependencies = ["pytest>=8.2.1", "pytest-cov>=5.0.0"]
@@ -109,3 +109,8 @@ known-first-party = ["tasty_api"]
 
 [tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"
+
+[tool.pyright]
+include = ["src"]
+strict = ["src"]
+pythonVersion = "3.8"
