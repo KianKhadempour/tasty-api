@@ -50,7 +50,6 @@ python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
 test = "pytest {args}"
 test-cov = "pytest --cov=src/tasty_api {args}"
 
-
 [tool.coverage.run]
 source_pkgs = ["tasty_api", "tests"]
 branch = true
@@ -101,8 +100,7 @@ lint.select = [
 ]
 lint.ignore = ["ISC001", "UP006", "UP007"]
 lint.unfixable = [
-  # Don't touch unused imports
-  "F401",
+  "F401",  # Don't touch unused imports
 ]
 
 [tool.ruff.lint.isort]
